@@ -33,7 +33,7 @@ typedef struct ph
 } ph;
 
 
-int print_f(const char *format, ...);
+int _printf(const char *format, ...);
 int (*_pr_spf(char sp))(va_list, flags_t *);
 int print_char(char c);
 int _write_str(char *s);
