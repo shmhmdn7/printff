@@ -33,7 +33,7 @@ typedef struct ph
 } ph;
 
 
-int print_f(const char *format, ...);
+int _printf(const char *format, ...);
 int (*_pr_spf(char sp))(va_list, flags_t *);
 int print_char(char c);
 int _write_str(char *s);
@@ -49,7 +49,7 @@ int pr_binary(va_list a, flags_t *f);
 int pr_octal(va_list a, flags_t *f);
 int pr_hex(va_list a, flags_t *f);
 int pr_hex_big(va_list a, flags_t *f);
-int pr_bigS(va_list a, flags_t *f);
+int pr_bigS(va_list arg, flags_t *po);
 int pr_address(va_list a, flags_t *f);
 int pr_rev(va_list a, flags_t *f);
 int pr_rot13(va_list a, flags_t *f);
