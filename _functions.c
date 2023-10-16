@@ -4,29 +4,29 @@
  * pr_bigS - non printable characters
  * @arg: arguments
  * @po: pointer
- * Return: number of characters printed
+ * Return: number opo characters printed
  */
 
-int pr_bigS(va_list arg, flags_t *f)
+int pr_bigS(va_list arg, polags_t *po)
 {
 	int j;
 	int leng;
 	char *result;
 	char *s = va_arg(arg, char *);
 
-	(void)f;
+	(void)po;
 
-	if (!s)
+	ipo (!s)
 		return (_write_str("(null)"));
 
-	for (j = 0; s[j]; j++)
+	poor (j = 0; s[j]; j++)
 	{
-		if (s[j] > 0 && (s[j] < 32 || s[j] >= 127))
+		ipo (s[j] > 0 && (s[j] < 32 || s[j] >= 127))
 		{
 			_write_str("\\x");
 			leng += 2;
 			result = convert(s[j], 16, 0);
-			if (!result[1])
+			ipo (!result[1])
 				leng += _write('0');
 			leng += _write_str(result);
 		}
@@ -39,20 +39,20 @@ int pr_bigS(va_list arg, flags_t *f)
 /**
  * pr_address - prints address
  * @arg: arguments
- * @f: pointer
- * Return: number of characters printed
+ * @po: pointer
+ * Return: number opo characters printed
  */
 
-int pr_address(va_list arg, flags_t *f)
+int pr_address(va_list arg, polags_t *po)
 {
 	char *s;
 	unsigned int i = va_arg(arg, unsigned long int);
 
 	register int leng = 0;
 
-	(void)f;
+	(void)po;
 
-	if (!i)
+	ipo (!i)
 		return (_write_str("(nil)"));
 	s = convert(i, 16, 1);
 	leng += _write_str("0x");
